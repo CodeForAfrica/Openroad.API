@@ -10,6 +10,7 @@ import datetime
 
 @task()
 def push_to_rapidpro():
+    print("Task started")
     # Get unProcessed messages
     unprocessed_messages = Inbox.objects.filter(processed=0)[:1]
 
