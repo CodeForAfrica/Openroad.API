@@ -126,8 +126,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CELERY_BROKER_URL = 'redis://0.0.0.0:6379/0'
-CELERY_RESULT_BACKEND = 'redis://0.0.0.0:6379/0'
+CELERY_BROKER_URL = 'redis://openroad:eaf674ea9fc3912b5e99e8b76f5cecadffd269f4c6ceda510e391a8b0c6e1889@dokku-redis-openroad:6379'
+CELERY_RESULT_BACKEND = 'redis://openroad:eaf674ea9fc3912b5e99e8b76f5cecadffd269f4c6ceda510e391a8b0c6e1889@dokku-redis-openroad:6379'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
