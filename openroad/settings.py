@@ -26,6 +26,11 @@ SECRET_KEY = 'jqeg7fedr-+o9k1vv9$r1ng$^1fu04stu7%@-=%zxl1$5k_6k_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+ALLOWED_HOSTS = [
+    'openroad.dokku-1.codefortanzania.org'
+]
+
+
 # Application definition
 
 INSTALLED_APPS = [
