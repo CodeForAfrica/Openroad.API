@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 from datetime import timedelta
 
+import dj_database_url
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -143,16 +145,27 @@ CELERY_BEAT_SCHEDULE = {
     }
 }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'openroad',
-        'USER': 'openroad_user',
-        'PASSWORD': 'openroad',
-        'HOST': 'localhost',
-        'PORT': '',
+# Database
+# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
+
+import dj_database_url
+
+# to facilitate on dokku environment | by resgef
+if os.environ.get('DATABASE_URL', ''):
+    DATABASES = {
+        'default': dj_database_url.config()
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'dbname',
+            'USER': 'dbuser',
+            'HOST': '127.0.0.1',
+            'PORT': '5432',
+            'PASSWORD': 'yourdbpass',
+        }
+    }
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',

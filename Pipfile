@@ -14,6 +14,7 @@ django-celery-beat = "*"
 django-tokenapi = "*"
 requests = "*"
 gunicorn = "*"
+dj-database-url = "*"
 
 [requires]
 python_version = "2.7"
