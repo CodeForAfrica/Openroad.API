@@ -6,6 +6,9 @@ from django.conf import settings
 
 import datetime
 
+def index(request):
+    return HttpResponse("OpenRoad API")
+
 @csrf_exempt
 def inbox(request):
     if request.method == 'POST':
