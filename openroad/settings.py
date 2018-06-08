@@ -173,4 +173,4 @@ AUTHENTICATION_BACKENDS = (
     )
 
 API_KEY = "f49ec1981f9df3eb2da444d8e02aad571ffd21d0e014670b598633ee296eaf62"
-RAPIDPRO_URL = "https://rapidpro.dokku-1.codefortanzania.org/c/ex/b86a96cc-4fa3-4849-9f2e-7213cbb06d85/receive"
+RAPIDPRO_URL = "https://rapidpro.dokku-1.codefortanzania.org/c/ex/dd2a3351-4b3c-46b9-846c-2738e45037e9/receive"
