@@ -20,7 +20,7 @@ def push_to_rapidpro():
 
     if len(unprocessed_messages):
         message = unprocessed_messages[0]
-        print len(unprocessed_messages)
+        print(len(unprocessed_messages))
         message.processed = 1
         message.processed_at = datetime.datetime.now()
         message.save()
