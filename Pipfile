@@ -15,8 +15,6 @@ django-tokenapi = "*"
 requests = "*"
 gunicorn = "*"
 dj-database-url = "*"
-kombu = "*"
-amqp = "*"
 
 [requires]
 python_version = "2.7.12"
