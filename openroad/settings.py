@@ -126,8 +126,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CELERY_BROKER_URL = 'redis://openroad:eaf674ea9fc3912b5e99e8b76f5cecadffd269f4c6ceda510e391a8b0c6e1889@dokku-redis-openroad:6379'
-CELERY_RESULT_BACKEND = 'redis://openroad:eaf674ea9fc3912b5e99e8b76f5cecadffd269f4c6ceda510e391a8b0c6e1889@dokku-redis-openroad:6379'
+CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL', '')
+CELERY_RESULT_BACKEND = os.getenv('CELERY_RESULT_BACKEND', '')
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
@@ -172,5 +172,5 @@ AUTHENTICATION_BACKENDS = (
     'tokenapi.backends.TokenBackend',
     )
 
-API_KEY = "f49ec1981f9df3eb2da444d8e02aad571ffd21d0e014670b598633ee296eaf62"
-RAPIDPRO_URL = "https://rapidpro.dokku-1.codefortanzania.org/c/ex/dd2a3351-4b3c-46b9-846c-2738e45037e9/receive"
+API_KEY = os.getenv('API_KEY', '')
+RAPIDPRO_URL = os.getenv('RAPIDPRO_URL', '')

@@ -1,1 +1,3 @@
 .vscode/
+celerybeat-schedule
+.env
